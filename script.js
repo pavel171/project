@@ -58,7 +58,16 @@ let appData = {
                 appData.monthIncome = save/100/12*percent;
                 alert("Доход в месяц с вашего депозита: " + appData.monthIncome);
            }
+       },
+       chooseOptExpenses: function() {
+        for (let i = 0; i < 3; i++) {
+            let opt = prompt("Статья необязательных расходов?", "");
+            appData.optionalExpenses[i] = opt;
+            }
+       },
+       chooseIncome: function() {
+           let items = prompt("Что принесет доп доход? (Перечислите через запятую"));
+           appData.income = items.split(", ");
        } 
     };
-
 
